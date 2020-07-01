@@ -1,0 +1,5 @@
+Hello,
+ 
+We're ready to activate your voting. All we need to do is make sure this is your email address.
+
+{{ url }}{% url 'confirm' instance.activation_key %}

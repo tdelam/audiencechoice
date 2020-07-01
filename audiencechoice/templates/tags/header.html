@@ -1,0 +1,30 @@
+{% load film_tags %}
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+                <img src="{{ MEDIA_URL }}images/logo.png" alt="Audience Choice Awards" />
+            </a>
+            <div class="nav-collapse collapse pull-right">
+                <ul class="nav">
+                    {% if request.session.email %}
+                        {% categories request.path %}
+                    {% endif %}
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    {% if request.session.email %}
+        <div class="container">
+            <div class="alert alert-info">
+                <strong>Important!</strong> When you have finished voting, you must <a href="{% url 'destroy_session' %}" class="btn btn-primary">click here to submit your vote(s)</a>.
+            </div>
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load thumbnail ratings_extras %}
+
+{% block title %}
+Cinefest Audience Choice Films 
+{% endblock title %}
+
+{% block content %}
+    <div class="row">
+        <div class="span12">
+            <h2>Films</h2>
+        </div>
+        {% for film in films %}
+            <div class="span4 film-container">
+                <img src="{{ film.thumb|thumbnail_url:'stills' }}" alt="{{ film.title }}" class="img-rounded stills" />
+                <h4>{{ film.title }}</h4>
+                <dl class="dl-horizontal">
+                    <dt>Director</dt>
+                    <dd>{{ film.director }}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>Year</dt>
+                    <dd>{{ film.year }}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>Country</dt>
+                    <dd>{{ film.country }}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>Runtime</dt>
+                    <dd>{{ film.runtime }}</dd>
+                </dl>
+
+                <div id="rating">
+                    {% if request.session.email %}
+                        {% show_rating film %}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

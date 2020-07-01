@@ -1,0 +1,87 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: #f7f7f7 url(/media/images/body-bg.jpg) top center no-repeat;
+}
+
+.navbar-inner {
+  background-color: #fff; /* background color will be black for all browsers */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.film-container { height: 430px; }
+
+.dl-horizontal dt { width: auto; }
+
+.dl-horizontal {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.dl-horizontal dd { margin-left: 80px; }
+
+#rating {
+    margin-top: 20px;
+    float: left;
+}
+
+#content {
+    margin-top: 120px;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+.nav {
+    top: 80px;
+}
+
+.nav a {
+  color: #0088cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-signin {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading  {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.form-signin input[type="text"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+.fields label { display: none; }
+
+.fields {
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+.errorlist {
+    color: red;
+    padding-bottom: 10px;
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
