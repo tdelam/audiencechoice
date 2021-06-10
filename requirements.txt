@@ -1,4 +1,4 @@
-Django==1.5.2
+Django==2.2.24
 django-grappelli==2.7.1
 easy-thumbnails==2.2
 ecdsa==0.13
